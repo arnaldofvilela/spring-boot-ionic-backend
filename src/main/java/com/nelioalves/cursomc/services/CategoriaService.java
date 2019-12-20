@@ -21,10 +21,10 @@ public class CategoriaService {
 		}
 		return obj;
 	}
-	/*
-	public Categoria find(Integer id) {
-		Optional<Categoria> obj = repo.findById(id);
-		return obj.orElse(null);
-		}
-		*/
+
+	public Categoria insert(Categoria obj) {
+		obj.setId(null);
+		return repo.save(obj);
+	}
+
 }
